@@ -63,7 +63,7 @@ section {
   flex-direction: column;
   gap: 1.2rem;
   justify-content: center;
-  box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.25); /* this creates a soft, crispy look of the shadow born light coming from the left corner */
+  box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.25); /* this creates a soft, crispy look of the shadow born from light coming from the left corner */
 }
 ```
 
