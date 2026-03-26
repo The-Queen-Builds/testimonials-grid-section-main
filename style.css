@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --DANIEL-BG: hsl(263, 55%, 52%);
+  --JONATHAN-BG: hsl(217, 19%, 35%);
+  --WHITE-BG: hsl(0, 0%, 100%);
+  --BLACK-BG: hsl(0, 0%, 7%);
+  --LIGHT-PURPLE: hsl(264, 82%, 80%);
+}
+
+body {
+  align-content: center;
+  font-family: "Barlow Semi Condensed";
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  box-shadow: 20px 20px 45px rgba(0, 0, 0, 0.25); /* this creates a soft, crispy look of the shadow born light coming from the left corner */
+}
+
+img {
+  border-radius: 50%;
+  max-inline-size: 100%;
+  block-size: auto;
+  width: 40px;
+}
+
+.daniel img {
+  border: 2px solid var(--LIGHT-PURPLE);
+}
+
+.patrick img {
+  border: 2px solid var(--DANIEL-BG);
+}
+
+.profile {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.daniel,
+.jonathan,
+.patrick {
+  color: var(--WHITE-BG);
+}
+
+.jeanette,
+.kira {
+  color: var(--BLACK-BG);
+  background-color: var(--WHITE-BG);
+}
+
+.name,
+.heading {
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 2rem;
+}
+
+.daniel {
+  background-color: var(--DANIEL-BG);
+  grid-area: da;
+}
+
+.jonathan {
+  background-color: var(--JONATHAN-BG);
+  grid-area: jo;
+}
+
+.jeanette {
+  grid-area: je;
+}
+
+.patrick {
+  background-color: var(--BLACK-BG);
+  grid-area: pa;
+}
+
+.kira {
+  grid-area: ki;
+}
+
+footer {
+  margin-top: auto;
+  padding: 2.5rem 0 0 0;
+}
+
+@media (min-width: 48rem) {
+  .container {
+    margin: 0 auto;
+    display: grid;
+    width: 1000px;
+    max-inline-size: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "da da jo"
+      "je pa pa"
+      "ki ki ki";
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 90rem) {
+  .container {
+    width: 1700px;
+    max-inline-size: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "da da jo ki"
+      "je pa pa ki";
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
